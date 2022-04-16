@@ -390,3 +390,14 @@ footer {
 p {
     font-size: medium;
 }
+table {
+    font-family: inherit;
+    border-collapse: collapse;
+    width: 100%;
+    text-align-last: center;
+}
+td, tr {
+    border: 1px solid #c2c2c2;
+    text-align: left;
+    padding: 8px;
+  }
