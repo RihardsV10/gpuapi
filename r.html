@@ -5,6 +5,7 @@
     <title>Vulkan Reklāma</title>
 
     <link rel="stylesheet" href="r.css">
+    <script src="r.js" defer></script>
     <link rel="icon" type="image/x-icon" href="icons/webi.png">
 </head>
 <body>
@@ -17,13 +18,15 @@
             <div class="navbar-right">
                 <a href="#">Sākums</a>
                 <a href="#">Par mums</a>
-                <a href="#">Kontakti</a>
+                <a href="#kontakti">Kontakti</a>
             <div class="col-xs-10">
             <div class="row">
                 <div class="col-xs-12">
                         <div class="search">
-                            <input type="text" placeholder="Meklēt" class="search_input">
+                            <form action="https://google.com/search" method="get">
+                            <input type="text" placeholder="Meklēt" class="search_input" name="q">
                             <button type="submit" class="search_button">
+                            </form>
                                 <img src="icons/search.png" alt="search" class="search_input" width="15" height="15">
                             </button>
                             </div>
@@ -31,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>s
 </div>  
 <section>
         <div class="container">
@@ -44,10 +47,10 @@
                 <h2>Augstas veiktspējas GPU API, kas paredzēts mūsdienu industrijai.</h2>
                     <p>Vulkan API, atvērts standarts 3D grafikai. Ir augstas veiktspējas reāllaika 3D grafikas lietojumprogrammas, piemēram, videospēles un interaktīvie mediji.</p>
                     <div class="button-list">
-                        <button class="button clr-cyan">
+                        <button onclick="window.location.href = 'https://www.khronos.org/news/press/vulkan-reduces-fragmentation-and-provides-roadmap-visibility-for-developers'" class="button clr-cyan">
                             Lasīt vairāk
                         </button>
-                        <button class="button clr-blue">
+                        <button onclick="window.location.href = 'https://www.vulkan.org'" class="button clr-blue">
                             Vulkan oficiāla saite
                                          </button>
                                     </div>
@@ -66,20 +69,20 @@
                 <div class="section-slide-card">
                     <img src="/icons/opengl.png" alt="">
                     <h4>OpenGL</h4>
-                    <b>Starpplatformu saskarne 2D un 3D vektorgrafikas renderēšanai.</b>
-                    <footer> <b> <a href="#">Lasīt vairāk &gt;&gt;</a></b></footer>
+                    <b>Starpplatformu saskarne 2D un 3D vektorgrafikas renderēšanai<span id="k1">...</span><span id="more"> parasti izmanto, lai mijiedarbotos ar GPU, lai panāktu aparatūras paātrinātu renderēšanu.</span></b>
+                    <footer> <b> <a href="#" onclick="myFunction()" id="b1">Lasīt vairāk &gt;&gt;</a></b></footer>
                 </div>
                 <div class="section-slide-card">
                     <img src="/icons/dx.png">
                     <h4>DirectX</h4>
-                    <b>Īpaši spēļu programmēšanu un video, Microsoft platformās.</b>
-                    <footer><b> <a href="#">Lasīt vairāk &gt;&gt;</a></b></footer>
+                    <b>Īpaši spēļu programmēšanu un video, Microsoft platformās<span id="k2">...</span><span id="more2"> nodrošina zema līmeņa piekļuvi aparatūras komponentiem, piemēram, videokartēm, skaņas kartei un atmiņai. </span></b>
+                    <footer><b> <a href="#" onclick="myFunction2()" id="b2">Lasīt vairāk &gt;&gt;</a></b></footer>
                 </div>
                 <div class="section-slide-card">
                     <img src="/icons/khronos.png" alt="">
                     <h4>Citi GPU api (Khronos)</h4>
-                    <b>Bezmaksas atvērto standartu izvietošana un izstrāde 3D grafikai, virtuālajai un paplašinātajai realitātei, paralēlajai skaitļošanai, neironu tīkliem un citi.</b>
-                    <footer><b> <a href="#">Lasīt vairāk &gt;&gt;</a></b></footer>
+                    <b>khronos bezatlīdzības atvērtie standarti 3D grafikai, virtuālajai un paplašinātajai realitātei, paralēlajai skaitļošanai, mašīnmācībai un redzes apstrādei<span id="k3"></span>...</span><span id="more3">Khronos® Group ir parakstījuši saprašanās memorandu un noslēguši sadarbības sadarbību, lai veicinātu sinerģiju starp abām organizācijām, lai veicinātu standartizāciju automobiļu un nākotnes inteliģentās mobilitātes jomā.</span></b>
+                    <footer><b> <a href="#" onclick="myFunction3()" id="b3">Lasīt vairāk &gt;&gt;</a></b></footer>
                 </div>
             </div>
         </div>
@@ -90,32 +93,38 @@
                 <h2>Izmantojiet Vulkan tulīt!</h2>
                 <br>
                 <div class="button-list">
-                    <button class="button clr-yellow">
+                    <button onclick="window.location.href = 'https://vulkan.lunarg.com/'" class="button clr-yellow">
                         Nopirkt (pa velti)
                     </button>
-                    <button class="button clr-red">
+                    <button onclick="window.location.href = 'https://vulkan.lunarg.com/'" class="button clr-red">
                         Izmēģināt
                     </button>
                 </div>
                 <div class="marginblk-100px"></div>
             </div>
         </div>
-        <div class="main2">
-        <div class="section">
-            <div class="section-slideshow">
-                <div class="heroB">
-                    <div class="dot-position">
-                        <div class="slideshow-dots">
-                        <div class="dot"></div>
-                        <div class="dot active"></div>
-                        <div class="dot"> </div>
+    </div>
+        <div class="slideshow-container">
 
-                            </div>
-                        </div>
-                    </div>      
-                </div>
+            <div class="mySlides">
+              <img src="/icons/vkrd.png" style="width:80%">
             </div>
-        </div>
+            
+            <div class="mySlides">
+              <img src="/icons/vulkancode.png" style="width:80%">
+            </div>
+            
+            <div class="mySlides">
+              <img src="/icons/vulkangame.png" style="width:80%">
+            </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+            </div>
             <table>
                 <tr>
                     <th>Funkcijas un citi</th>
@@ -159,18 +168,19 @@
             <img src="icons/vulkan.png" alt="search" width="200" height="60">
             </div>
             <div class="navbar_bottom_center">
-                <b>kontakti: <br>
+                <b id="kontakti"> kontakti: <br>
                 E-pasts: Lietotajs990@gmail.com<br>
                 Tel: +371 200529812</b></div>
             <div class="navbar_bottom_right">
                 <a href="">Izvelne</a>
                 <a href="">Sākums</a>
                 <a href="">Par mums</a>
-                <a href="">kontakti</a>
+                <a href=#kontakti>kontakti</a>
             </div>
             </div>
             <div class="navbar_bottom2">
                 <div class="navbar_bottom_Center2">
                     <b>Autors: RihardsV10</b>
                 </div>
-        </div></body>
+        </div>
+    </body>

@@ -189,17 +189,16 @@ body {
 }
 
 .dot {
-    display: flex;
-    flex-direction: row;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 2px;
-    border: 2px solid #f5f5f5;
     cursor: pointer;
-}
+    height: 15px;
+    width: 15px;
+    margin: 0 1px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 50%;
+    display: inline-block;
+  }
 
-.dot:hover, .active {
+.active, .dot:hover {
     background-color: #ff0000;
 }
 
@@ -359,7 +358,6 @@ body, html {
       padding: 10px 50 50px;
   }
   .heroB {
-    background-image: url(/icons/Vulkan-Wide.png);
     height: 100%;
     width: 100%;
     background-size: contain;
@@ -401,3 +399,19 @@ td, tr {
     text-align: left;
     padding: 8px;
   }
+  #more {
+      display: none
+  }
+  #more2 {
+    display: none
+}
+#more3 {
+    display: none
+}
+.slideshow-container {
+    text-align: center;
+}
+
+.mySlides {
+    display: none
+}
